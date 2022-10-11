@@ -11,6 +11,18 @@
       body{
          text-align: center;
       }
+      .cl{
+         background-color: #37393b;
+         width: 50vw;
+         height: 70vh;
+      }
+     
+      @media only screen and (max-width: 600px) {
+  .cl {
+    width: 100vw;
+    height: 75vh;
+  }
+}
       
    </style>
    <!-- JavaScript Bundle with Popper -->
@@ -34,7 +46,7 @@
       socket.on('userSet', function(data){
          user = data.username;
 
-         document.body.innerHTML = '<h1 class="center p-5 text-light" style="font-size: 4rem;font-family: monospace">Vartalaap</h1>\<div class="center m-auto p-5 rounded-4 justify-content-center" style="background-color: #37393b;width: 50vw; height: 70vh;"><input type="text" id="message" class="my-5 py-2 px-5 border rounded-2" placeholder="Enter message...">\
+         document.body.innerHTML = '<h1 class="center p-5 text-light" style="font-size: 4rem;font-family: monospace">Vartalaap</h1>\<div class="center m-auto p-5 rounded-4 justify-content-center cl" ><input type="text" id="message" class="my-5 py-2 px-5 border rounded-2" placeholder="Enter message...">\
          <button type="button"  class="btn btn-primary text-center py-2" name="button" onclick="sendMessage()">Send</button>\
          <div id="message-container"  class="text-light d-flex flex-column overflow-auto  h-75" ></div></div>';
       });
@@ -56,7 +68,7 @@
    <div id="error-container" class="text-light d-flex flex-column"></div>
    <h1 id="h"></h1>
    <p id="paragraph"></p>
-   <div class="center m-auto p-5 rounded-4 justify-content-center" style="background-color: #37393b;width: 50vw; height: 70vh;">
+   <div class="center m-auto p-5 rounded-4 justify-content-center cl" >
       <h3 class=" w-75 text-center m-auto p-2 " style='font-size: 2rem; font-family: cursive;
       color: rgb(81, 127, 167);'
      ><span style="font-size: 4rem;">Hey</span>, welcome to Vartalaap a new chat application to connect with people.</h3>
