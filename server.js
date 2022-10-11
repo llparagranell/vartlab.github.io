@@ -30,6 +30,6 @@ io.on('connection', function(socket){
 
 var port = 3000;
 
-http.listen(port, function () {
+http.listen(process.env.PORT || port, function () {
   console.log("Listening on port :-" + port);
 });
